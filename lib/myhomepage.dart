@@ -14,7 +14,7 @@ class _MyHomePageState extends State<MyHomePage> {
   XFile? _imageFile;
   final String uploadUrl = '192.168.0.137';
   void ftpservice(File file) async{
-    FTPConnect ftpConnect = FTPConnect('ftp5.pptik.id', user: 'pklonline-pptik', pass: 'PKLOnlIne12', port: 2121);
+    FTPConnect ftpConnect = FTPConnect('Your Server Host', user: '.....', pass: '.....', port: 2121);
     // File fileToUpload = File('fileToUpload.txt');
     await ftpConnect.connect();
     // bool res = await ftpConnect.uploadFileWithRetry(fileToUpload, pRetryCount: 2);
@@ -23,8 +23,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   void rmq() async {
     ConnectionSettings settings = ConnectionSettings(
-        host: "ftp5.pptik.id",
-        authProvider: PlainAuthenticator("pklonline-pptik", "PKLOnlIne12")
+        host: ".....",
+        authProvider: PlainAuthenticator("User", "Pass")
     );
     Client client = Client(settings: settings);
 
